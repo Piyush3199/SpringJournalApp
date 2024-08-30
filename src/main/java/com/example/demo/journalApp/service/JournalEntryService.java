@@ -33,3 +33,4 @@ public class JournalEntryService {
         journalEntryRepository.deleteById(id);
     }
 }
+ 
