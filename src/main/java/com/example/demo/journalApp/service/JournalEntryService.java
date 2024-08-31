@@ -2,6 +2,7 @@ package com.example.demo.journalApp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.journalApp.entity.JournalEntry;
 import com.example.demo.journalApp.entity.User;
@@ -20,6 +21,8 @@ public class JournalEntryService {
     @Autowired
     private UserService userService;
 
+    @Transactional
+    //Used annotation to make the method transactional, so that if any exception occurs, the transaction is rolled back
     public void saveEntry(JournalEntry journalEntry,String userName){
         User user = userService.findByUserName(userName);
         //Saving in journalEntries

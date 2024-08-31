@@ -24,6 +24,9 @@ public class JournalApplication {
 
 
 }
+
+
+
 //MongoDatabaseFactory -> Interface used to create MongoDatabase object from MongoClient.
 //PlatformTransactionManager -> Interface
 //MongoTrasactionManager -> Implementation of the interface, need to create a bean for it in the configuration class.
