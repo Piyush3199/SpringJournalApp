@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.mongodb.lang.NonNull;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 @Document(collection = "journal_entries")
 @Getter
 @Setter
+@NoArgsConstructor
 //Can use @Data to avoid indivisual getters and setters
 public class JournalEntry {
 	
