@@ -7,6 +7,7 @@ import com.example.demo.journalApp.entity.JournalEntry;
 import com.example.demo.journalApp.repository.JournalEntryRepository;
 import org.bson.types.ObjectId;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 
@@ -18,6 +19,7 @@ public class JournalEntryService {
 
 
     public void saveEntry(JournalEntry journalEntry){
+        journalEntry.setDate(LocalDateTime.now());
         journalEntryRepository.save(journalEntry);
     }
 

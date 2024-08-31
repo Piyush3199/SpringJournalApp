@@ -1,10 +1,10 @@
 package com.example.demo.journalApp.entity;
 
-import java.sql.Date;
-
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.mongodb.lang.NonNull;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +20,7 @@ public class JournalEntry {
 	
 	@Id // Created a primary key
 	private ObjectId id;
+	@NonNull
 	private String title;
 	private String content;
 	private LocalDateTime date;
